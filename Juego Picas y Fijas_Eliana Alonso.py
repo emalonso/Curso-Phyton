@@ -10,14 +10,14 @@ for i in range (100): # le doy un rango de 100 veces hacer la prueba
 print lista # imprime la lista
 
 """ comparacion de enteros y contador de picas y fijas """
-def comparar_FP(lista):
+def comparar_FP(lista, lista_usuario):
         var1=0
         contadorf = 0
         contadorp = 0
-        for i in range (len (digitos)):
-            if lista[var1]==digitos[i]:
+        for i in range (len (lista_usuario)):
+            if lista[var1]==lista_usuario[i]:
                 contadorf+=1
-            elif digitos[i] in lista:
+            elif lista_usuario[i] in lista:
                 contadorp+=1
             var1+=1
         return contadorf,contadorp
@@ -31,7 +31,7 @@ for i in range (5):
     digitos=[int(x)for x in list(a)] # convierte la lista en numeros enteros
     print digitos
 
-    fijas,picas = comparar_FP (lista) # toma la lista y las define como variables
+    fijas,picas = comparar_FP (lista, digitos) # toma la lista y las define como variables
     
     matriz.append(["al ingresar " +(a)+ " usted obtuvo "," fijas "+ str(fijas)," picas "+ str(picas)])# aprende los numero ingresado detro de una matriz
     
